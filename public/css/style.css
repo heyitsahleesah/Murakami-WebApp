@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Roboto:wght@300&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14pt;
+  margin: auto;
+  padding: auto;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 10vw 10vw 20vw 10vw 10vw 20vw 10vw 10vw;
+  grid-template-rows: 10vh 10vh 10vh 10vh 20vh 10vh 10vh 10vh 10vh;
+  background-image: url("/img/backgroundwwhite.jpg");
+  background-position: center;
+  background-size: 100vh;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+#formContainer {
+  grid-row: 5 / span 1;
+  grid-column: 4 / span 2;
+  display: block;
+  background-color: rgb(255, 255, 255);
+  border-color: black;
+  border-style: double;
+  border-width: 5px;
+  text-align: center;
+}
+
+input[type=text] {
+  border: none;
+  border-bottom: 2px solid black;
+  text-align: center;
+  color:tomato;
+}
+
+input[type=password] {
+  border: none;
+  border-bottom: 2px solid black;
+  text-align: center;
+  color:tomato;
+}
+
+label{
+  font-size: 12pt;
+  color:black
+}
+
+#email, #password{
+  font-size: 16pt;
+  width: 90%;
+}
+
+button{
+  transition-duration: 0.4s;
+  font-size: 12pt;
+  background-color: white;
+  color: tomato;
+  border: tomato;
+  margin-top: 20px;
+}
+
+button:hover{
+  background-color: tomato;
+  color: white;
+}
+
+/*for 700px or less*/
+@media screen and (max-width:700px){
+body{
+  display: grid;
+  grid-gap: 0;
+  grid-template-columns: 10vw 10vw 5vw 25vw 25vw 5vw 10vw 10vw;
+  grid-template-rows: 10vh 10vh 10vh 5vh 5vh 20vh 5vh 5vh 10vh 10vh 10vh;
+  background-position: center center;
+}
+
+#formContainer {
+  grid-row: 6 / span 2;
+  grid-column: 4 / span 2;
+}
+
+button{
+  margin-top: 10px;
+}
+}

@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Roboto:wght@300&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18pt;
+  margin: auto;
+  padding: auto;
+  color: white;
+  background-color: black;
+  background: url("/img/self-portrait.jpg") center/cover;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+#content {
+  display: grid;
+  grid-template-columns: 2vw 15vw 15vw 4vw 14vw 14vw 4vw 7.5vw 7.5vw 15vw 2vw;
+  grid-template-rows: 10vh 5vh 5vh 15vh 15vh 15vh 15vh 5vh 5vh 5vh 5vh;
+}
+
+#bottom {
+  grid-column: 2 / span 4;
+  grid-row: 7 / span 4;
+  overflow: auto;
+}
+
+#right_column {
+  grid-column: 9 / span 3;
+  grid-row: 3 / span 2;
+  overflow: auto;
+  font-size: 12pt;
+  color:black;
+  text-align:center;
+}
+
+a {
+  color: white;
+}
+
+nav {
+  grid-column: 10 / span 1;
+  grid-row: 2 / span 1;
+  text-align: left;
+  padding-left: 50px;
+}
+
+input[type='submit'] {
+  font-size: 12pt;
+  background-color: #00aeff;
+  color: black;
+  transform: scale(1.5, 1.5);
+}
+
+input[type='submit']:hover {
+  color: white;
+  background-color: tomato;
+  transform: scale(1.5, 1.5);
+}
+
+input[type='submit']:active {
+  color: white;
+  background-color: tomato;
+  transform: translateY(4px);
+  transform: scale(1.5, 1.5);
+}
+
+table{
+  background: rgba(255, 255, 255, 0.89);
+  color: black;
+  font-size: 10pt;
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid black;
+}
+
+td, th{
+  text-align: left;
+}
+
+tr:hover{
+  background: tomato;
+}
+
+#name {
+  font-family: 'Comforter Brush', cursive;
+  color: tomato;
+  font-size: 6vw;
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
+  justify-content: left;
+  padding-left: 50px;
+  filter: drop-shadow(16px 16px 20px rgb(0, 225, 255)) invert(25%);
+}
+
+/*for 700px or less*/
+@media screen and (max-width:700px){
+  body {
+    background-size: 125vw;
+  }
+
+  #content{
+    display: grid;
+    grid-gap: 0;
+    grid-template-columns: 2vw 30vw 4vw 28vw 4vw 30vw 2vw;
+    grid-template-rows: 10vh 10vh 10vh 20vh 20vh 10vh 10vh 10vh;
+    background-position: center center;
+  }
+
+  #bottom {
+    grid-column: 2 / span 5;
+    grid-row: 6 / span 3;
+    overflow: auto;
+    width: 100%;
+  }
+
+  #right_column {
+    grid-column: 6 / span 3;
+    grid-row: 3 / span 2;
+    background-color:rgba(255, 255, 255, 0.788);
+  }
+
+  #name {
+    grid-row: 3 / span 1;
+  }
+
+nav {
+  grid-column: 2 / span 1;
+  grid-row: 5 / span 1;
+  padding-left: 20px;
+}
+}

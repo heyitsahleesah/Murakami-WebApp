@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "global": "^4.4.0",
+    "jsdom": "^18.1.0",
+    "mysql2": "^2.3.3-rc.0",
+    "npm": "^8.1.3"
+  }
+}
